@@ -1,0 +1,63 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Google Terms Of Service{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'main/css/terms.css' %}">
+{% endblock %}
+
+{% block content %}
+    <!--top picture-->
+    <div class="tos-hero">
+        <img src="{% static 'main/images/tos_main_illustration.svg' %}" alt="Terms of Service picture">
+    </div>
+
+    <!--tos content-->
+    <article class="tos-content">
+
+        <h1 class="tos-title">Google Terms of Service</h1>
+
+        <p class="tos-meta">
+            Effective {{ effective_date }}
+            |
+            <a href="https://www.google.com/terms/archive">Archived versions</a>
+            |
+            <a href="https://www.gstatic.com/policies/terms/pdf/20220105/it7r24p9/google_terms_of_service_en-GB.pdf">Download PDF</a>
+        </p>
+
+        <p class="tos-country">
+            <a href="https://www.google.com/terms?hl=en-SA&fg=1#footnote-country-version">Country version</a> {{ country }}
+        </p>
+
+        <!--this loops for sections in the json-->
+        {% for section in sections %}
+            <section class="tos-section">
+
+                <h2 class="tos-section-title">{{ section.title }}</h2>
+
+                {% if section.intro %}
+                    <p class="section-intro">{{ section.intro|safe }}</p>
+                {% endif %}
+
+                {% if section.body %}
+                    <p>{{ section.body|safe }}</p>
+                {% endif %}
+
+                {% if section.bullets %}
+                <ul class="tos-list">
+                    {% for item in section.bullets %}
+                        <li>{{ item|safe }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+
+                {% if section.footer %}
+                    <p>{{ section.footer|safe }}</p>
+                {% endif %}
+
+            </section>
+        {% endfor %}
+
+    </article>
+{% endblock %}

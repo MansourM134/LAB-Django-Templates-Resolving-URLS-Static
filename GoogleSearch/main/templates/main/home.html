@@ -1,0 +1,52 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Google{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'main/css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <!--logo-->
+    <div class="logo-wrap">
+        <img src="{% static 'main/images/google-logo.png' %}" alt="Google" class="google-logo">
+    </div>
+
+    <!--search box-->
+    <form class="search-form" action="https://www.google.com/search" method="GET" target="_blank">
+        <div class="search-box">
+            <span class="material-icons search-icon">search</span>
+
+            <input
+             type="text"
+             name="q"
+             class="search-input"
+             autocomplete="off"
+             aria-label="Search"
+            >
+
+             <button type="button" class="media-btn" aria-label="Search by voice">
+                <img src="{% static 'main/images/mircophone.png' %}" alt="Voice search">
+             </button>
+             
+             <button type="button" class="media-btn" aria-label="Search by image">
+                <img src="{% static 'main/images/camera.png' %}" alt="Search by image">
+             </button>
+        </div>
+
+        <!--action buttons-->
+        <div class="search-actions">
+            <button type="submit" class="btn-search">Google Search</button>
+            <button type="submit" class="btn-search" name="btnI" value="I">I'm Feeling Lucky</button>
+        </div>
+    </form>
+
+    <!--language-->
+    <p class="language-note">
+        Google offered in: <a href="#">العربيه</a>
+    </p>
+
+</section>
+{% endblock %}
