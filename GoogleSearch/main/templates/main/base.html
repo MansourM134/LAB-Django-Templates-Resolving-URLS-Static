@@ -1,6 +1,7 @@
-{% load static %}
+{% load static i18n %}
+{% get_current_language as CURRENT_LANG %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ CURRENT_LANG }}" dir="{% if CURRENT_LANG == 'ar' %}rtl{% else %}ltr{% endif %}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,12 +22,12 @@
     <header class="site-header">
         <nav class="header-nav">
             {% block header_nav %}
-            <a href="https://mail.google.com" target="_blank">Gmail</a>
-            <a href="https://images.google.com" target="_blank">Images</a>
+            <a href="https://mail.google.com" target="_blank">{% trans "Gmail" %}</a>
+            <a href="https://images.google.com" target="_blank">{% trans "Images" %}</a>
             <button class="icon-btn" title="Google apps">
                 <span class="material-icons">apps</span>
             </button>
-            <a href="https://accounts.google.com" class="btn-signin" target="_blank">Sign in</a>
+            <a href="https://accounts.google.com" class="btn-signin" target="_blank">{% trans "Sign in" %}</a>
             {% endblock %}
         </nav>
     </header>
@@ -42,19 +43,19 @@
     <footer class="site-footer">
         {% block footer %}
             <div class="footer-top">
-                <span>Saudi Arabia</span>
+                <span>{% trans "Saudi Arabia" %}</span>
             </div>
             <div class="footer-bottom">
                 <div class="footer-links footer-links--left">
-                    <a href="https://about.google/?utm_source=google-SA&utm_medium=referral&utm_campaign=hp-footer&fg=1" target="_blank">About</a>
-                    <a href="https://business.google.com/en-all/google-ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1" target="_blank">Advertising</a>
-                    <a href="https://business.google.com/en-all/business-profile/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1" target="_blank">Business</a>
-                    <a href="https://www.google.com/search/howsearchworks/?fg=1" target="_blank">How Search works</a>
+                    <a href="https://about.google/?utm_source=google-SA&utm_medium=referral&utm_campaign=hp-footer&fg=1" target="_blank">{% trans "About" %}</a>
+                    <a href="https://business.google.com/en-all/google-ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1" target="_blank">{% trans "Advertising" %}</a>
+                    <a href="https://business.google.com/en-all/business-profile/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1" target="_blank">{% trans "Business" %}</a>
+                    <a href="https://www.google.com/search/howsearchworks/?fg=1" target="_blank">{% trans "How Search works" %}</a>
                 </div>
                 <div class="footer-links footer-links--right">
-                    <a href="https://policies.google.com/privacy?hl=en-SA&fg=1" target="_blank">Privacy</a>
-                    <a href="{% url 'main:terms_view' %}">Terms</a>
-                    <a href="#">Settings</a>
+                    <a href="https://policies.google.com/privacy?hl=en-SA&fg=1" target="_blank">{% trans "Privacy" %}</a>
+                    <a href="{% url 'main:terms_view' %}">{% trans "Terms" %}</a>
+                    <a href="#">{% trans "Settings" %}</a>
                 </div>
             </div>
         {% endblock %}

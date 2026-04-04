@@ -1,0 +1,65 @@
+# Arabic translations for GoogleSearch
+# Edit msgstr values, then run: python manage.py compilemessages
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0?0:n==1?1:n==2?2:n%100>=3&&n%100<=10?3:n%100>=11?4:5;\n"
+
+msgid "Google Search"
+msgstr "بحث Google"
+
+msgid "I'm Feeling Lucky"
+msgstr "أنا أشعر بالحظ"
+
+msgid "Search"
+msgstr "بحث"
+
+msgid "Search by voice"
+msgstr "بحث صوتي"
+
+msgid "Search by image"
+msgstr "البحث بالصور"
+
+msgid "Google offered in:"
+msgstr "Google متاح باللغة:"
+
+msgid "Switch to Arabic"
+msgstr "التبديل إلى العربية"
+
+msgid "Switch to English"
+msgstr "التبديل إلى الإنجليزية"
+
+msgid "Gmail"
+msgstr "Gmail"
+
+msgid "Images"
+msgstr "الصور"
+
+msgid "Sign in"
+msgstr "تسجيل الدخول"
+
+msgid "Saudi Arabia"
+msgstr "المملكة العربية السعودية"
+
+msgid "About"
+msgstr "حول"
+
+msgid "Advertising"
+msgstr "إعلانات"
+
+msgid "Business"
+msgstr "أعمال"
+
+msgid "How Search works"
+msgstr "كيف يعمل البحث"
+
+msgid "Privacy"
+msgstr "الخصوصية"
+
+msgid "Terms"
+msgstr "الشروط"
+
+msgid "Settings"
+msgstr "الإعدادات"

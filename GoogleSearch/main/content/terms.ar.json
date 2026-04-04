@@ -1,0 +1,39 @@
+{
+  "effective_date": "5 يناير 2022",
+  "country": "المملكة العربية السعودية",
+  "sections": [
+    {
+      "title": "ما الذي تغطيه هذه الشروط",
+      "intro": "نعلم أنك قد تميل إلى تخطي شروط الخدمة هذه، لكن من المهم توضيح ما يمكنك توقعه منا عند استخدامك <a href=\"https://www.google.com/terms?hl=ar&fg=1#footnote-services\">خدمات</a> Google، وما نتوقعه منك.",
+      "body": "تعكس شروط الخدمة هذه <a href=\"https://about.google/company-info/how-our-business-works/\">طريقة عمل أعمال Google</a>، والقوانين المطبَّقة على شركتنا، و<a href=\"https://about.google/company-info/philosophy/\">بعض الأشياء التي آمنّا بها دائمًا</a>. وبناءً على ذلك، تساعد شروط الخدمة هذه في تحديد علاقة Google بك عند تفاعلك مع خدماتنا. وتتضمن هذه الشروط على سبيل المثال محاور الموضوعات التالية:",
+      "bullets": [
+        "<a href=\"https://www.google.com/terms?hl=ar&fg=1#toc-what-you-expect\">ما يمكنك توقعه منا</a>، الذي يصف كيفية تقديمنا لخدماتنا وتطويرها",
+        "<a href=\"https://www.google.com/terms?hl=ar&fg=1#toc-what-you-expect\">ما نتوقعه منك</a>، الذي يُرسي قواعد معينة لاستخدام خدماتنا",
+        "<a href=\"https://www.google.com/terms?hl=ar&fg=1#toc-content\">المحتوى في خدمات Google</a>، الذي يصف حقوق الملكية الفكرية للمحتوى الذي تجده في خدماتنا",
+        "<a href=\"https://www.google.com/terms?hl=ar&fg=1#toc-problems\">في حال وجود مشكلات أو خلافات</a>، الذي يصف الحقوق القانونية الأخرى المتاحة لك"
+      ],
+      "footer": "يُعدّ فهم هذه الشروط أمرًا مهمًا لأنك بمجرد استخدامك لخدماتنا توافق على هذه الشروط. إلى جانب هذه الشروط، ننشر أيضًا <a href=\"https://policies.google.com/privacy\">سياسة الخصوصية</a>. وعلى الرغم من أنها ليست جزءًا من هذه الشروط، فإننا نشجعك على قراءتها لفهم أفضل لكيفية <a href=\"https://myaccount.google.com/?hl=ar\">تحديث معلوماتك وإدارتها وتصديرها وحذفها</a>."
+    },
+    {
+      "title": "الشروط",
+      "intro": null,
+      "body": null,
+      "bullets": [],
+      "footer": null
+    },
+    {
+      "title": "مزوّد الخدمة",
+      "intro": null,
+      "body": "تُقدَّم <a href=\"https://www.google.com/terms?hl=ar&fg=1#footnote-services\">خدمات</a> Google من قِبل شركة Google LLC، وأنت تتعاقد معها. وهي منظَّمة وفق قوانين ولاية ديلاوير الأمريكية، وتعمل وفق قوانين الولايات المتحدة الأمريكية — 1600 Amphitheatre Parkway، Mountain View، كاليفورنيا 94043، الولايات المتحدة الأمريكية.",
+      "bullets": [],
+      "footer": null
+    },
+    {
+      "title": "متطلبات العمر",
+      "intro": "إذا كان عمرك أقل من <a href=\"https://support.google.com/accounts/answer/1350409?hl=ar\">السن المطلوبة لإدارة حساب Google الخاص بك</a>، فيجب أن تحصل على إذن أحد والديك أو وليّك القانوني لاستخدام حساب Google. يُرجى مطالبة أحد والديك أو وليّك القانوني بقراءة هذه الشروط معك.",
+      "body": null,
+      "bullets": [],
+      "footer": "إذا كنت أحد الوالدين أو وليًّا قانونيًّا، وسمحت لطفلك باستخدام <a href=\"https://www.google.com/terms?hl=ar&fg=1#footnote-services\">الخدمات</a>، فتنطبق هذه الشروط عليك وتكون مسؤولًا عن نشاط طفلك على الخدمات. تشترط بعض خدمات Google متطلبات عمر إضافية كما هو موضح في <a href=\"https://www.google.com/terms?hl=ar&fg=1#footnote-services\">الشروط والسياسات الإضافية الخاصة بكل خدمة</a>."
+    }
+  ]
+}

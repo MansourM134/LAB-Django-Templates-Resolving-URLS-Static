@@ -1,5 +1,5 @@
 {% extends 'main/base.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block title %}Google{% endblock %}
 
@@ -24,29 +24,41 @@
              name="q"
              class="search-input"
              autocomplete="off"
-             aria-label="Search"
+             aria-label="{% trans 'Search' %}"
             >
 
-             <button type="button" class="media-btn" aria-label="Search by voice">
-                <img src="{% static 'main/images/mircophone.png' %}" alt="Voice search">
+             <button type="button" class="media-btn" aria-label="{% trans 'Search by voice' %}">
+                <img src="{% static 'main/images/mircophone.png' %}" alt="{% trans 'Search by voice' %}">
              </button>
              
-             <button type="button" class="media-btn" aria-label="Search by image">
-                <img src="{% static 'main/images/camera.png' %}" alt="Search by image">
+             <button type="button" class="media-btn" aria-label="{% trans 'Search by image' %}">
+                <img src="{% static 'main/images/camera.png' %}" alt="{% trans 'Search by image' %}">
              </button>
         </div>
 
         <!--action buttons-->
         <div class="search-actions">
-            <button type="submit" class="btn-search">Google Search</button>
-            <button type="submit" class="btn-search" name="btnI" value="I">I'm Feeling Lucky</button>
+            <button type="submit" class="btn-search">{% trans "Google Search" %}</button>
+            <button type="submit" class="btn-search" name="btnI" value="I">{% trans "I'm Feeling Lucky" %}</button>
         </div>
     </form>
 
     <!--language-->
-    <p class="language-note">
-        Google offered in: <a href="#">العربيه</a>
-    </p>
+    {% get_current_language as CURRENT_LANG %}
+    <span class="language-note">
+        {% trans "Google offered in:" %}
+        <form class="lang-form" action="{% url 'set_language' %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ request.path }}">
+            {% if CURRENT_LANG == 'en' %}
+                <input type="hidden" name="language" value="ar">
+                <button type="submit" class="lang-btn">العربية</button>
+            {% else %}
+                <input type="hidden" name="language" value="en">
+                <button type="submit" class="lang-btn">English</button>
+            {% endif %}
+        </form>
+    </span>
 
 </section>
 {% endblock %}
