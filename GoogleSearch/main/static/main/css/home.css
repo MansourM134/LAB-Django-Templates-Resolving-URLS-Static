@@ -30,11 +30,11 @@
     width: 100%;
     display: flex;
     align-items: center;
-    border: 1px solid #dfe1e5;
+    border: 1px solid var(--color-border);
     border-radius: 24px;
     padding: 8px 14px;
     gap: 8px;
-    background: #fff;
+    background: var(--color-bg);
     transition: box-shadow 0.2s, border-color 0.2s;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .search-icon {
-    color: #9aa0a6;
+    color: var(--color-text-secondary);
     font-size: 20px;
     flex-shrink: 0;
 }
@@ -56,7 +56,7 @@
     outline: none;
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 16px;
-    color: #202124;
+    color: var(--color-text);
     background: transparent;
     min-width: 0;
 }
@@ -89,10 +89,10 @@
 }
 
 .btn-search {
-    background: #f8f9fa;
-    border: 1px solid #f8f9fa;
+    background: var(--color-surface);
+    border: 1px solid var(--color-surface);
     border-radius: 8px;
-    color: #3c4043;
+    color: var(--color-text);
     font-family: 'Roboto', arial, sans-serif;
     font-size: 14px;
     padding: 0 16px;
@@ -102,16 +102,16 @@
 }
 
 .btn-search:hover {
-    border-color: #dadce0;
+    border-color: var(--color-border);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    background: #f8f9fa;
+    background: var(--color-surface);
 }
 
 /*language note*/
 .language-note {
     margin-top: 28px;
     font-size: 13px;
-    color: #202124;
+    color: var(--color-text);
     display: flex;
     align-items: center;
     gap: 6px;
@@ -127,7 +127,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: #1a0dab;
+    color: var(--color-link);
     font-family: 'Roboto', arial, sans-serif;
     font-size: 13px;
     padding: 0;
@@ -144,8 +144,13 @@
 }
 
 [dir="rtl"] .media-btn:first-of-type {
-    padding-left: 4px;
-    padding-right: 12px;
-    border-left: none;
-    border-right: 1px solid #dfe1e5;
+    padding-left: 12px;
+}
+
+[data-theme="dark"] .mic-icon {
+    content: url("/static/main/images/mircophone-removebg.png");
+}
+
+[data-theme="dark"] .camera-icon {
+    content: url("/static/main/images/camera-removebg.png");
 }

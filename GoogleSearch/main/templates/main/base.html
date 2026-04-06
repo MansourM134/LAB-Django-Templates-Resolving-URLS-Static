@@ -1,7 +1,7 @@
 {% load static i18n %}
 {% get_current_language as CURRENT_LANG %}
 <!DOCTYPE html>
-<html lang="{{ CURRENT_LANG }}" dir="{% if CURRENT_LANG == 'ar' %}rtl{% else %}ltr{% endif %}">
+<html lang="{{ CURRENT_LANG }}" dir="{% if CURRENT_LANG == 'ar' %}rtl{% else %}ltr{% endif %}" data-theme="{{ theme }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,8 +54,26 @@
                 </div>
                 <div class="footer-links footer-links--right">
                     <a href="https://policies.google.com/privacy?hl=en-SA&fg=1" target="_blank">{% trans "Privacy" %}</a>
-                    <a href="{% url 'main:terms_view' %}">{% trans "Terms" %}</a>
+                    <a href="{% url 'main:terms_view' lang=CURRENT_LANG %}">{% trans "Terms" %}</a>
                     <a href="#">{% trans "Settings" %}</a>
+
+                    <form class="theme-form" action="{% url 'main:set_theme_view' %}" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="next" value="{{ request.path }}">
+                        {% if theme == 'dark' %}
+                            <input type="hidden" name="theme" value="light">
+                            <button type="submit" class="theme-btn">
+                                <span class="material-icons">light_mode</span>
+                                {% trans "Light mode" %}
+                            </button>
+                        {% else %}
+                            <input type="hidden" name="theme" value="dark">
+                            <button type="submit" class="theme-btn">
+                                <span class="material-icons">dark_mode</span>
+                                {% trans "Dark mode" %}
+                            </button>
+                        {% endif %}
+                    </form>
                 </div>
             </div>
         {% endblock %}

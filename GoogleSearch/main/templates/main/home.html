@@ -15,7 +15,7 @@
     </div>
 
     <!--search box-->
-    <form class="search-form" action="https://www.google.com/search" method="GET" target="_blank">
+    <form class="search-form" action="{% url 'main:search_view' %}" method="GET">
         <div class="search-box">
             <span class="material-icons search-icon">search</span>
 
@@ -28,11 +28,11 @@
             >
 
              <button type="button" class="media-btn" aria-label="{% trans 'Search by voice' %}">
-                <img src="{% static 'main/images/mircophone.png' %}" alt="{% trans 'Search by voice' %}">
+                <img class="mic-icon" src="{% static 'main/images/mircophone.png' %}" alt="{% trans 'Search by voice' %}">
              </button>
              
              <button type="button" class="media-btn" aria-label="{% trans 'Search by image' %}">
-                <img src="{% static 'main/images/camera.png' %}" alt="{% trans 'Search by image' %}">
+                <img class="camera-icon" src="{% static 'main/images/camera.png' %}" alt="{% trans 'Search by image' %}">
              </button>
         </div>
 

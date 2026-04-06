@@ -1,3 +1,33 @@
+/*color set for light mode*/
+:root {
+    --color-bg:           #ffffff;
+    --color-surface:      #f2f2f2;
+    --color-border:       #dadce0;
+    --color-text:         #202124;
+    --color-text-secondary: #5f6368;
+    --color-text-muted:   #1f1f1f;
+    --color-link:         #1a0dab;
+    --color-link-blue:    #1a73e8;
+    --color-link-blue-hover: #1557b0;
+    --color-icon:         #5f6368;
+    --color-icon-hover-bg: #f1f3f4;
+}
+
+/*color set for dark mode*/
+[data-theme="dark"] {
+    --color-bg:           #202124;
+    --color-surface:      #292a2d;
+    --color-border:       #3c4043;
+    --color-text:         #e8eaed;
+    --color-text-secondary: #9aa0a6;
+    --color-text-muted:   #bdc1c6;
+    --color-link:         #8ab4f8;
+    --color-link-blue:    #8ab4f8;
+    --color-link-blue-hover: #aecbfa;
+    --color-icon:         #9aa0a6;
+    --color-icon-hover-bg: #3c4043;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -7,15 +37,15 @@
 body {
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 14px;
-    color: #202124;
-    background: #fff;
+    color: var(--color-text);
+    background: var(--color-bg);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 a {
-    color: #1a0dab;
+    color: var(--color-link);
     text-decoration: none;
 }
 
@@ -38,7 +68,7 @@ a:hover {
 
 .header-nav a {
     font-size:  13px;
-    color: #202124;
+    color: var(--color-text);
     padding: 8px 6px;
 }
 
@@ -54,11 +84,11 @@ a:hover {
     border-radius: 50%;
     display: flex;
     align-items: center;
-    color: #5f6368;
+    color: var(--color-icon);
 }
 
 .icon-btn:hover {
-    background: #f1f3f4;
+    background: var(--color-icon-hover-bg);
 }
 
 .icon-btn .material-icons {
@@ -66,7 +96,7 @@ a:hover {
 }
 
 .btn-signin {
-    background-color: #1a73e8;
+    background-color: var(--color-link-blue);
     color: #fff !important;
     font-weight: 500;
     font-size: 14px !important;
@@ -77,7 +107,7 @@ a:hover {
 }
 
 .btn-signin:hover {
-    background-color: #1557b0;
+    background-color: var(--color-link-blue-hover);
     text-decoration: none !important;
 }
 
@@ -88,14 +118,14 @@ a:hover {
 
 /*footer*/
 .site-footer {
-    background: #f2f2f2;
-    border-top: 1px solid #dadce0;
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
     font-size: 14px;
-    color: #1f1f1f;
+    color: var(--color-text-muted);
 }
 
 .footer-top {
-    border-bottom: 1px solid #dadce0;
+    border-bottom: 1px solid var(--color-border);
     padding: 15px 30px;
 }
 
@@ -113,10 +143,40 @@ a:hover {
 }
 
 .footer-links a {
-    color: #1f1f1f;
+    color: var(--color-text-muted);
     font-size: 14px;
 }
 
 .footer-links a:hover {
     text-decoration: underline;
+}
+
+.theme-form {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.theme-btn {
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 13px;
+    padding: 1px 9px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.theme-btn:hover {
+    background: var(--color-icon-hover-bg);
+    border-color: var(--color-text-secondary);
+}
+
+.theme-btn .material-icons {
+    font-size: 15px;
 }

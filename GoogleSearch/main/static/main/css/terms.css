@@ -23,28 +23,28 @@
 .tos-title {
     font-size: 24px;
     font-weight: 700;
-    color: #202124;
+    color: var(--color-text);
     margin-bottom: 8px;
 }
 
 .tos-meta {
     font-size: 14px;
-    color: #5f6368;
+    color: var(--color-text-secondary);
     margin-bottom: 4px;
 }
 
 .tos-meta a {
-    color: #1a73e8;
+    color: var(--color-link-blue);
 }
 
 .tos-country {
     font-size: 14px;
-    color: #5f6368;
+    color: var(--color-text-secondary);
     margin-bottom: 36px;
 }
 
 .tos-country a {
-    color: #1a73e8;
+    color: var(--color-link-blue);
 }
 
 .tos-section {
@@ -54,7 +54,7 @@
 .tos-section-title {
     font-size: 16px;
     font-weight: 700;
-    color: #202124;
+    color: var(--color-text);
     margin-bottom: 12px;
 }
 
@@ -69,13 +69,13 @@
 .tos-content p {
     font-size: 14px;
     line-height: 1.75;
-    color: #202124;
+    color: var(--color-text);
     margin-bottom: 12px;
 }
 
 /*inside json file a tag style*/
 .tos-content p a {
-    color: #1a73e8;
+    color: var(--color-link-blue);
     text-decoration: none;
 }
 
@@ -92,10 +92,13 @@
 .tos-list li {
     font-size: 14px;
     line-height: 1.75;
-    color: #3c4043;
+    color: var(--color-text);
     margin-bottom: 6px;
 }
 
+[data-theme="dark"] .hero-pic {
+    content: url("/static/main/images/tos_main_illustration-removebg-preview.png");
+}
 
 
 
